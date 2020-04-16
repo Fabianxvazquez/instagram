@@ -3,14 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter, } from 'react-router-dom';
-import { AuthProvider, } from "./providers/AuthProvider";
+import { BrowserRouter as Router } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Router>,
   document.getElementById('root')
 );
 
