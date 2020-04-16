@@ -6,7 +6,7 @@ const Item = (props) => {
 
   return(
     <>
-    <Card>
+    <Card align='center'>
       <Card.Header>{props.name}</Card.Header>
       <Card.Content>{props.image}</Card.Content>
       <Card.Content>{props.description}</Card.Content>

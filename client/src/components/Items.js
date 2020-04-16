@@ -1,7 +1,7 @@
 import React, { useState, useEffect, } from 'react';
 import axios from "axios"
 import Item from "./Item";
-import {Button, CardGroup, } from "semantic-ui-react"
+import {Button, CardGroup, Card } from "semantic-ui-react"
 
 
 const Items = () => {
@@ -15,7 +15,7 @@ const Items = () => {
       })
   }, []);
 
-  const addItem = (item) => setItems([item, ...items])
+  // const addItem = (item) => setItems([item, ...items])
 
   const renderItems = () => {
     return items.map(item => (
@@ -48,7 +48,8 @@ const Items = () => {
       <hr />
       <br />
       <br />
-    <CardGroup>
+    
+    <CardGroup itemsPerRow={4}>
       {renderItems()}
     </CardGroup>
     </div>
