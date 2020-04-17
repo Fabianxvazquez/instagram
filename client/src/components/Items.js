@@ -1,7 +1,7 @@
 import React, { useState, useEffect, } from 'react';
 import axios from "axios"
 import Item from "./Item";
-import {Button, CardGroup, Card } from "semantic-ui-react"
+import {CardGroup, } from "semantic-ui-react"
 
 
 const Items = () => {
@@ -15,32 +15,14 @@ const Items = () => {
       })
   }, []);
 
-  // const addItem = (item) => setItems([item, ...items])
 
   const renderItems = () => {
     return items.map(item => (
-      <Item key={item.id} {...item} deleteItem={deleteItem} editItem={editItem} />
+      <Item key={item.id} {...item}  />
     ))
   };
 
-  const deleteItem = (id) => {
-    axios.delete(`/api/items/${id}`)
-      .then(res => {
-        setItems(items.filter(item => item.id !== id))
-      })
-  }
-
-  const editItem = (id, item) => {
-    axios.put(`/api/items/${id}`, item)
-      .then( res => {
-        const updateItem = items.map( item => {
-          if (item.id === id)
-            return res.data
-           return item; 
-        })
-          setItems(updateItem)
-      })
-  }
+  
 
   return (
     <div>
