@@ -1,5 +1,5 @@
 import React from "react"
-import {Card} from "semantic-ui-react"
+import {Card, Image} from "semantic-ui-react"
 
 const Item = (props) => {
   const item = {id: props.id, name: props.name, image: props.image, description: props.description, likes:props.likes}
@@ -8,7 +8,7 @@ const Item = (props) => {
     <>
     <Card align='center'>
       <Card.Header>{props.name}</Card.Header>
-      <Card.Content>{props.image}</Card.Content>
+      <Image size="small" src={props.image} />
       <Card.Content>{props.description}</Card.Content>
       <Card.Meta>{props.likes}</Card.Meta>
     </Card>
