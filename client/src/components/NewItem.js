@@ -9,14 +9,8 @@ class NewItem extends React.Component {
     description: '',
     likes: '',
   };
-  // const [name, setName] = useState('')
-  // const [image, setImage] = useState('')
-  // const [description, setDescription] = useState('')
-  // const [likes, setLikes] = useState('')
 
-  // const item = {item: item, image: image, description: description, likes: likes}
-
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
     axios
       .post(`/api/items`, this.state)

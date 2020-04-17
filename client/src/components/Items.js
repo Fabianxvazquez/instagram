@@ -2,6 +2,7 @@ import React, { useState, useEffect, } from 'react';
 import axios from "axios"
 import Item from "./Item";
 import {CardGroup, } from "semantic-ui-react"
+// import NewItem from './NewItem';
 
 
 const Items = () => {
@@ -27,6 +28,7 @@ const Items = () => {
   return (
     <div>
       <h1 align="center">Instagerms</h1>
+      
       <hr />
       <br />
       <br />
@@ -34,6 +36,7 @@ const Items = () => {
     <CardGroup itemsPerRow={4}>
       {renderItems()}
     </CardGroup>
+    
     </div>
   );
 };
