@@ -14,7 +14,7 @@ const Navbar = () => (
         All Posts
       </Menu.Item>
     </Link>
-    <Link to="/new_item">
+    <Link to="/new-item">
       <Menu.Item>
         Add New Post
       </Menu.Item>
