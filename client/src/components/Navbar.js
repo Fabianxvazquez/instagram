@@ -11,12 +11,12 @@ const Navbar = () => (
     </Link>
     <Link to="/items">
       <Menu.Item>
-        All Items
+        All Posts
       </Menu.Item>
     </Link>
     <Link to="/new_item">
       <Menu.Item>
-        Add New Item
+        Add New Post
       </Menu.Item>
     </Link>
   </Menu>
