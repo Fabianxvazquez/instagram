@@ -41,43 +41,38 @@ class NewItem extends React.Component {
     return (
       <>
         <Form onSubmit={this.handleSubmit}>
-          <Form.Group>
-            {/* <Form.Label>Name </Form.Label> */}
+          <Form.Group widths='equal'>
             <Form.Input
-              placeholder="Name"
-              type="input"
+              label="Name"
               name="name"
-              required
+              placeholder="name"
               value={name}
               onChange={this.handleChange}
               required
             />
-            {/* <Form.Label>Image </Form.Label> */}
             <Form.Input
+              label="Image Url"
               placeholder="Image"
               type="input"
               name="image"
-              required
               value={image}
               onChange={this.handleChange}
               required
             />
-            {/* <Form.Label>Description: </Form.Label> */}
             <Form.Input
+              label="Description"
               placeholder="Description"
               type="input"
               name="description"
-              required
               value={description}
               onChange={this.handleChange}
               required
             />
-            {/* <Form.Label>Likes </Form.Label> */}
             <Form.Input
+              label="Likes"
               placeholder="Likes"
               type="input"
               name="likes"
-              required
               value={likes}
               onChange={this.handleChange}
               required
