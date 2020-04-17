@@ -5,6 +5,7 @@ import Items from "./components/Items";
 import Navbar from "./components/Navbar"
 import Home from "./components/Home"
 import NewItem from "./components/NewItem"
+import NoMatch from "./components/NoMatch"
 
 const App = () => (
   <>
@@ -14,8 +15,8 @@ const App = () => (
     <Route exact path="/" component={Home} />
     <Route exact path="/items" component={Items} />
     <Route exact path="/new_item" component={NewItem}/>
+    <Route component={NoMatch} />
     </Switch>
-    
   </Container>
   </>
 )
